@@ -26,8 +26,10 @@ V8: 11.4.183.29-electron.0
 OS: Windows_NT x64 10.0.22631
 ```
 
-The objective is to build a multi-platform (`amd64` and `arm64`) image that can be
-use in the [`.devcontainer/devcontainer.json`](.devcontainer/devcontainer.json) file as the argument for the `image` property 
+In the WSL Ubuntu environment, I use this version of the DevContainer CLI: https://github.com/devcontainers/cli/releases/tag/v0.52.1
+
+The objective is to build a multi-platform (`amd64` and `arm64`) DevContainer image that can be
+used in the [`.devcontainer/devcontainer.json`](.devcontainer/devcontainer.json) file as the argument for the `image` property 
 to speed up the VSCode DevContainer startup (about 10 seconds).
 
 To reproduce:
