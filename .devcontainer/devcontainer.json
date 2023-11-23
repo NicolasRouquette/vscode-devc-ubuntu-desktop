@@ -1,0 +1,25 @@
+{
+  "name": "humble-ros-core-jammy",
+  "image": "artifactory-fn.jpl.nasa.gov:16001/gov/nasa/jpl/imce/autonomica/humble-ros-core-jammy:latest",
+  // See https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user#_specifying-a-user-for-vs-code
+  "remoteUser": "vscode",
+  // See https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user#_specifying-the-default-container-user
+  "containerUser": "vscode",
+  "runArgs": [
+    "--shm-size=2g",
+    "--privileged",
+    "--network=host"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/${localWorkspaceFolderBasename}",
+  "mounts": [
+    // This may not work everywhere.
+    // "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind"
+  ],
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Web VNC"
+    }
+  }
+}

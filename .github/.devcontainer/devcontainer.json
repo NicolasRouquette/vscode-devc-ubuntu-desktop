@@ -1,0 +1,10 @@
+{
+  "name": "ubuntu jammy with ros2 humble",
+  "dockerFile": "Dockerfile",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "password": "vscode",
+      "webPort": "6080"
+    }
+  }
+}
